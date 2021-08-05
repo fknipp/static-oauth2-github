@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OAuth 2.0 implementation using Github as provider</title>
+    <link
+      rel="shortcut icon"
+      href="https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/user-avatar/295c50f1-df2a-41c3-80ee-3bef24da8bb5-small.jpg"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="login">
+      <h1>Login on Github</h1>
+      <p>
+        The link contains the following informations:
+      </p>
+      <dl></dl>
+      <p>Note the value of <b>state</b>. <button>Reset it</button> It is a countermeasure against CSRF attacks.</p>
+      <p>
+        <a
+        href="https://github.com/login/oauth/authorize?client_id=a783ee310bebc9f1d6d8"
+        >Perform authorization on GitHub</a>
+      </p>
+    </section>
+    <section id="authcode">
+      <h1>Authorization code received on redirect</h1>
+      <p>
+        I've received the authorization code. These are all parameters:
+      </p>
+      <dl></dl>
+      <p>
+        Mind the fact, that an authorization code might be used only once.
+      </p>
+    </section>
+    <section id="request">
+      <h1>Request access token</h1>
+      <p>
+        If the state matches the previous one, we can request the access token using these parameters:
+      </p>
+      <dl></dl>
+      <p>
+        The request token cannot be requested by the browser, so the server acts as proxy to retrieve it. The <b>client_secret</b> should never be leaked to the browser, it is shown here for demonstration purposes only.
+      </p>
+      <p>
+        <button disabled>Request access token</button>        
+      </p>
+    </section>
+    <section id="accesstoken">
+      <h1>Access token</h1>
+      <p>
+        This is the returned value by the server. If everything went fine, it contains the access token:
+      </p>
+      <dl></dl>
+      <p>
+        Let's get some informations about the user.
+      </p>
+      <p>
+        <button disabled>Access the resource</button>        
+      </p>
+    </section>
+    <section id="resource">
+      <h1>Resource access</h1>
+      <p>
+        This is the information about the user.
+      </p>
+      <pre></pre>
+    </section>
+    <section id="misc">
+      <h1>Miscellaneous</h1>
+      <ul>
+        <li><a href="/">Restart</a></li>
+        <li><a href="https://glitch.com/edit/#!/static-oauth2-github">Remix the project on glitch.com</a></li>
+      </ul>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
