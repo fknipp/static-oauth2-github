@@ -1,10 +1,10 @@
-# OAuth 2.0 implementation using Github as provider
+# OAuth 2.0 implementation using GitHub as provider
 
-This is a simple web applications without external dependencies to demonstrate the authorization workflow using Githab as OAuth provider.
+This is a simple web applications without external dependencies to demonstrate the authorization workflow using GitHub as OAuth provider.
 
 Open the network panel of the developer tools to see the authorization in action.
 
-See the [Github documentation](https://docs.github.com/v3/oauth/) for details.
+See the [GitHub documentation](https://docs.github.com/v3/oauth/) for details.
 
 ## More about OAuth 2.0
 
