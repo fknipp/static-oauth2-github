@@ -52,3 +52,11 @@ button {
 ul {
   list-style-type: none;
 }
+
+:link {
+  color: #007c57;
+}
+
+:visited {
+  color: #96b522;
+}

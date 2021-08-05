@@ -42,7 +42,7 @@ if (document.location.search) {
 
 ///////////////////////////////////////////////////////////////
 
-// Functions
+// Functions for the flow
 
 function prepareLogin() {
   const loginParameters = {
@@ -116,7 +116,7 @@ function showResponse(response) {
   document.querySelector("#resource pre").textContent = response;
 }
 
-// Functions to fill out the document
+// Function to fill out the document
 
 function fillDlWithEntries(id, entries) {
   const dl = document.querySelector(`#${id} dl`);
@@ -132,6 +132,8 @@ function fillDlWithEntries(id, entries) {
   }
   dl.replaceChildren(...children);
 }
+
+// Function to highlight the current step of the flow
 
 function activate(ids) {
   document.querySelectorAll("section").forEach(e => {
