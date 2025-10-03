@@ -7,11 +7,11 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "http-proxy-middleware": "^2.0.1"
+    "express": "^5.1.0",
+    "http-proxy-middleware": "^3.0.5"
   },
   "engines": {
-    "node": "14.x"
+    "node": "22.x"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/static-oauth2-github"
