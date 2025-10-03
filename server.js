@@ -5,7 +5,7 @@ const app = express();
 
 // Add middleware for http proxying
 const apiProxy = createProxyMiddleware({
-  target: "https://github.com",
+  target: "https://github.com/login/oauth/access_token",
   changeOrigin: true
 });
 app.use("/login/oauth/access_token", apiProxy);
@@ -17,6 +17,6 @@ app.use("/login/oauth/access_token", apiProxy);
 
 app.use(express.static(__dirname));
 
-const listener = app.listen(process.env.PORT, () => {
+const listener = app.listen(8080, () => {
   console.log("Your app is listening on port " + listener.address().port);
 });
